@@ -1,0 +1,81 @@
+##Create a program that reads two integers, a and b, from the user. Your program should compute and display:
+
+a = input("Enter a number:")
+b = input("Enter another number:")
+
+a = int(a)
+b = int(b)
+
+sum = a+b 
+diff = a - b
+multiply = a*b
+division = a/b
+
+print(sum)
+print(diff)
+print(multiply) 
+print(division)
+
+
+## In the US, fuel efficiency for vehicles is normally expressed in miles-per-gallon (MPG). 
+##In Canada, fuel efficiency is normally expressed in liters-per-hundred-kilometers (L/100 km). 
+##Use your research skills to determine how to convert from MPG to L/100 km. 
+##Then create a program that reads a value from the user (in American units) and displays the equivalent fuel efficiency in Canadian units.
+
+user_input_mpg = float(input())
+mpg = 24
+conversion = (float(user_input_mpg/mpg))
+
+
+## The surface of the earth is c urved, and the distance between degrees of longitude varies with latitude
+import math
+
+#lat_sydney, long_sydney = -33.8608, 151.2093
+#lat_stockhlm, long_stockholm = 59.3293, 18.0686
+
+current_country = input("Enter you current country:")
+lat1 = math.radians(float(input("Provide your current lat:")))
+long1 = math.radians(float(input("Enter current longitude:")))
+
+destination_country = input("Enter your destination country:")
+lat2 = math.radians(float(input("Provide your destination lat2:")))
+long2 = math.radians(float(input("Provide your destination long2:")))
+
+#lat1 = math.radians(lat1)
+
+distance = 6371.01 * math.acos(math.sin(lat1))*math.sin(lat2)*math.cos(lat1)*math.cos(lat2)*math.cos(long1-long2)
+print(f"The distance from {current_country} to {destination_country} is {distance}")
+
+## Distance units: 
+
+def converter(feet = float(input("Please enter measurement in ft:"))):
+    inches = round( feet * 12, 2)
+    yards = round(feet / 3.0, 2)
+    miles =  round(feet / 5280.0,2)
+    print(f"This is feet in inches:", (float(inches))
+    print(f"This is feet in yard:", (float(yards))
+    print(f"This is feet in miles:",(float(miles))
+converter()
+
+
+###  student dictionary & update
+
+d = {}
+
+def name():
+    x = input('Please enter your name: ')
+    y = int(input('Please enter your score: '))
+    d[x] = y  
+    
+    print(d.keys())
+    if x in d.keys():
+        d[x] = d[x] + y
+    else:
+        d[x] = y
+
+    print (d)
+
+while True: 
+    name()
+
+
