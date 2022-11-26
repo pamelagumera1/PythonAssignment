@@ -87,3 +87,16 @@ t = float(input("Enter air temperature in celsius"))
 wci = 13.12 + 0.6215*t -  11.37*math.pow(v, 0.16) + 0.3965*t*math.pow(v, 0.16)
 
 print("The wind chill index is", int(round(wci, 2)))
+
+
+## Problem 8 Wk1 
+
+def totalSum(nr):
+    
+    sum = 0
+    for digit in str(nr): 
+      sum += int(digit)      
+    return sum
+   
+nr = 3141
+print(totalSum(nr))
